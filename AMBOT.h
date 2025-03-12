@@ -70,7 +70,7 @@
 #define AMBOT_h
 
 // Dependencias de librerias externas
-#include <arduino.h>
+#include <Arduino.h>
 #include <Adafruit_NeoPixel.h>
 #include <Servo.h> 
 #include <HCSR04.h>

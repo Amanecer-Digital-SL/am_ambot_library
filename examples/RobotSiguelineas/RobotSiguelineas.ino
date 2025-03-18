@@ -50,21 +50,21 @@ void setup() {
 
 void loop() {
   // Si ambos sensores detectan negro
-  if((AMBot.leerSiguelineas(AMBot.siguelineas_izquierdo)==HIGH)&&(AMBot.leerSiguelineas(AMBot.siguelineas_derecho)==HIGH)){
+  if((AMBot.leerSiguelineas(AMBot.siguelineas_izquierdo)==HIGH)&&(AMBot.leerSiguelineas(AMBot.siguelineas_derecho)==LOW)){
     // El robot debe ir hacia adelante
     AMBot.encenderMotores(AMBot.motores_alante);
     // Tomamos el tiempo
     time_to_off = millis();
   }
   // Si el sensor de la izquierda detecta negro
-  else if((AMBot.leerSiguelineas(AMBot.siguelineas_izquierdo)==HIGH)){
+  else if((AMBot.leerSiguelineas(AMBot.siguelineas_izquierdo)==LOW)){
     // Girar hacia la izquierda
     AMBot.encenderMotores(AMBot.sentido_antihorario);
     // Tomamos el tiempo
     time_to_off = millis();
   }
   // Si el sensor de la derecha detecta negro
-  else if((AMBot.leerSiguelineas(AMBot.siguelineas_derecho)==HIGH)){
+  else if((AMBot.leerSiguelineas(AMBot.siguelineas_derecho)==LOW)){
     // Girar hacia la derecha
     AMBot.encenderMotores(AMBot.sentido_horario);
     // Tomamos el tiempo
